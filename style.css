@@ -1,0 +1,295 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(bac1.jpg);
+  backdrop-filter: blur(5px);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  transition: background 0.3s ease;
+}
+
+
+
+
+/* App Container */
+.app-container {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  background: #ffffff8a;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header h1 {
+  font-size: 32px;
+  text-shadow: 0px 0px 15px rgb(255, 255, 255);
+  color: black;
+  font-family: Courier New;
+  margin-bottom: 20px;
+}
+.app-container:hover{
+  box-shadow: #ddd 0 1px 5px;
+}
+
+
+
+
+/* Generator Box */
+.generator-box {
+  padding: 25px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: #ffffff44;
+  position: relative;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.generator-box h2 {
+  font-size: 26px;
+  color: black;
+  font-weight: 1000;
+  text-shadow: 0px 0px 15px rgb(255, 255, 255);
+  margin-bottom: 15px;
+  font-family: Courier New;
+}
+
+::placeholder{
+  font-size: 16px;
+  color: #3d3d3d;
+  font-family: Courier New;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: calc(100% - 90px);
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #ffffff44;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-group input:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  cursor: text;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+.input-group button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  font-family: Courier New;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.input-group button:hover {
+  background: rgb(39, 39, 39);
+  box-shadow: 0 0 10px rgba(99, 99, 99, 0.5);
+}
+
+.slider-group {
+  margin-bottom: 20px;
+}
+
+
+.slider-group input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.slider-group label {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  color: #1d1d1d;
+  text-align: left;
+  color: #000000;
+  font-family: Courier New;
+  text-shadow: 2px 2-x 4px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Options Box */
+.options-box {
+  padding: 25px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: #ffffff44;
+  animation: scaleIn 0.5s ease;
+}
+
+.options-box h2 {
+  font-size: 26px;
+  color: black;
+  font-weight: 1000;
+  font-family: Courier New;
+  text-shadow: 0px 0px 15px rgb(255, 255, 255);
+  margin-bottom: 15px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.checkbox-group .column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.checkbox-group label {
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: Courier New;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.checkbox-group input:checked + label {
+  color: black;
+}
+
+
+
+
+
+/* Generate Button */
+.generate-btn  {
+  border-radius: 9px;
+  background-color: rgb(26, 26, 26);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 70%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.generate-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.7s;
+  font-family: Courier New;
+}
+
+.generate-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.generate-btn:hover{
+  background-color: black;
+
+}
+
+.generate-btn:hover span {
+  padding-right: 25px;
+  
+}
+
+.generate-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Strength Indicator */
+.strength-indicator {
+  margin-top: 20px;
+}
+
+#pass-indicator {
+  height: 8px;
+  border-radius: 5px;
+  width: 100%;
+  transition: width 0.5s ease;
+  background-color: black;
+}
+
+#strength-text {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #161616;
+  font-family: Courier New;
+  font-weight: 500;
+}
+
+
+#length-range{
+  accent-color: black ;
+  font-family: Courier New;
+}
+input[type='checkbox'] {
+  accent-color: black;
+}
+
+
